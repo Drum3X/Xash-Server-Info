@@ -84,6 +84,7 @@ $colors = [
     "^7",
     "^8",
 ];
+
 //results
 $result = [
     "hostname" => str_replace($colors, "", $netinforesult[2]),
