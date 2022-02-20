@@ -1,0 +1,1 @@
+# xashserverinfo.php
