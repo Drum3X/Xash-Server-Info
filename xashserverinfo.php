@@ -21,7 +21,7 @@ class Xashserver {
     function connect() {
         try {
             socket_connect($this->sock, $this->ip, $this->port);
-            echo "connection succesfuly\n\n";
+            echo "connected successfully\n\n";
         } catch (Exception $err) {
             echo "connection error\n\n$err";
         }
@@ -58,7 +58,7 @@ $xashserver->connect();
 sleep(4);
 
 //status command
-$statusresult = $xashserver->sendpackage("\xff\xff\xff\xff\status");
+$statusresult = $xashserver->sendpackage("\xff\xff\xff\xffstatus");
 $statusresult = preg_split("/\n/", $statusresult); 
 
 //get players info
