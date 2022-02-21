@@ -21,7 +21,7 @@ class Xashserver {
     function connect() {
         try {
             socket_connect($this->sock, $this->ip, $this->port);
-            echo "connected successfully\n\n";
+            echo "connection succesfuly\n\n";
         } catch (Exception $err) {
             echo "connection error\n\n$err";
         }
@@ -58,7 +58,7 @@ $xashserver->connect();
 sleep(4);
 
 //status command
-$statusresult = $xashserver->sendpackage("\xff\xff\xff\xffstatus");
+$statusresult = $xashserver->sendpackage("\xff\xff\xff\xff\x73\x74\x61\x74\x75\x73");
 $statusresult = preg_split("/\n/", $statusresult); 
 
 //get players info
@@ -69,7 +69,7 @@ for ($i = 2; $i < (count($statusresult) - 1); $i++) {
 }
 
 //netinfo command
-$netinforesult = $xashserver->sendpackage("\xff\xff\xff\xffnetinfo 48 0 4");
+$netinforesult = $xashserver->sendpackage("\xff\xff\xff\xff\x6e\x65\x74\x69\x6e\x66\x6f\x20\x34\x38\x20\x30\x20\x34");
 $netinforesult = explode("\\", $netinforesult);
 
 //xash colors
