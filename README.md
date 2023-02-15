@@ -1,17 +1,17 @@
-# how to install
+# Install
 
-# for linux and termux
+# For Linux And Termux
 
 ```sh
 apt install php 
 git clone https://github.com/Drum3X/xashserverinfo
 ```
 
-# for windows
+# For Windows
 
 don't use gaydown
 
-# how to use
+# How To Use
 
 ```sh
 php xashserverinfo.php <ip> <port>
